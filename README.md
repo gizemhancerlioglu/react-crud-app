@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+<div style="color: brown; text-align: center; padding:30px">
+<strong style="font-size:25px"> S A D E C R U D</strong>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br>
+```
+npx create-react-app sadecrud
+cd sadecrud
+npm start
+```
 
-## Available Scripts
+I defined navbar using bootstrap and I added the navbar to the pages I defined. <br>
+![navbar](https://user-images.githubusercontent.com/39413875/128742454-4912d466-bbd4-4234-b7cb-c3cc4dfb0dad.PNG) <br>
 
-In the project directory, you can run:
+A form component was created where users can enter their information, again with [Bootstrap](https://getbootstrap.com/). <br>
+![form](https://user-images.githubusercontent.com/39413875/128739807-84ace4ba-192e-4d4e-9c32-ae44f4940946.PNG) <br>
 
-### `npm start`
+User table created on home page with [React Table](https://react-table.tanstack.com/). <br>
+![table](https://user-images.githubusercontent.com/39413875/128740027-e730f9ce-1ea9-49b0-8364-0dbbb9d84e9d.PNG) <br>
+
+## Scripts
+I used json-server in the project so in the project directory, you can run:
+
+```
+npm run start:dev
+```  
+
+>"start": "react-scripts start" <br>
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+>"json-server": "json-server --watch db.json --port 3003"
+> *"**start:dev**": "concurrently \"npm start\" \"npm run json-server\""*
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Json-Server
+- Get all users:<br>
+**GET** http://localhost:3003/users
+- Create new user:<br>
+**POST** http://localhost:3003/users<br> ``` body: { phone:string, email:string, name:string, surname:string } ```
+- Update user:
+<br>**PUT** http://localhost:3003/users/$USER_ID<br> ``` body: { id:number, phone:string, email:string, name:string, surname:string } ```
+- Delete user:<br>
+**DELETE** http://localhost:3003/users/$USER_ID
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
