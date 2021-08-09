@@ -1,6 +1,7 @@
-<div style="color: brown; text-align: center; padding:30px">
-<strong style="font-size:25px"> S A D E C R U D</strong>
-</div>
+# S A D E C R U D
+
+If you want live view this project, click in url: <br>
+>https://sadecrud.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br>
 ```
@@ -40,4 +41,6 @@ Runs the app in the development mode.\
 <br>**PUT** http://localhost:3003/users/$USER_ID<br> ``` body: { id:number, phone:string, email:string, name:string, surname:string } ```
 - Delete user:<br>
 **DELETE** http://localhost:3003/users/$USER_ID
+
+
 
