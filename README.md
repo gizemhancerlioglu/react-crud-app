@@ -28,7 +28,7 @@ npm run start:dev
 >"start": "react-scripts start" <br>
 
 Runs the app in the development mode.\
->"json-server": "json-server --watch db.json --port 3003"
+>"json-server": "json-server --watch db.json --port 3003" <br>
 > *"**start:dev**": "concurrently \"npm start\" \"npm run json-server\""*
 
 ## Json-Server
